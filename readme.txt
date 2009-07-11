@@ -1,7 +1,7 @@
 Collapse Sectionfields
 -------------------------------------------------------------------------------
 
-Version: 1.0.0
+Version: 1.0.1
 Author: Carsten de Vries <carsten@vrieswerk.nl>
 Build Date: 11 July 2009
 Github Repository: http://github.com/carsten/globalparamloader/tree/master
@@ -20,3 +20,11 @@ Installation
    with-selected menu, then click Apply.
 
 3. Section edit pages now have a link to collapse/uncollapse sectionfields.
+
+Change Log
+-------------------------------------------------------------------------------
+
+1.0.1 Modified by Stephen Bau: Remove jQuery for Symphony 2.0.3+. 
+jQuery.noConflict mode. Fix margins CSS. 
+
+1.0.0 Initial Release
