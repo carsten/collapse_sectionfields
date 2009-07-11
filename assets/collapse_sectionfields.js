@@ -1,41 +1,41 @@
-$(document).ready(function() {
+jQuery(document).ready(function() {
 	// Insert anchor that will act as toggle to collapse/uncollapse the sectionfields
-	$('div.subsection h3').append('\
+	jQuery('div.subsection h3').append('\
 		(<a title="Toggle collapse" class="togglecollapse">Collapse</a>)\
 	');
 	
-	$("a.togglecollapse").toggle(
+	jQuery("a.togglecollapse").toggle(
 		function () {
 			// Collapse fields that are just added
-			$('ol.orderable li').css({'height' : 'auto'});
+			jQuery('ol.orderable li').css({'height' : 'auto'});
 			
 			// Hide all children
-			$('ol.orderable li').children().hide();
+			jQuery('ol.orderable li').children().hide();
 			
-			// Except the header of the field
-			$('ol.orderable li h4').show();
+			// Except the header of the field and remove bottom margin
+			jQuery('ol.orderable li h4').show().css('margin-bottom', '0');
 			
 			// Add a label with the title of the field to the header
-			$('ol.orderable li h4').each(
+			jQuery('ol.orderable li h4').each(
 				function (index) {
-					var fieldtitle = $("[name=\"fields["+ index +"][label]\"]").val();
-					$(this).after('<label class="meta fieldtitle">'+ fieldtitle + '</label>');
+					var fieldtitle = jQuery("[name=\"fields["+ index +"][label]\"]").val();
+					jQuery(this).after('<label class="meta fieldtitle">'+ fieldtitle + '</label>');
 				}
 			);
 			
 			// Change the link text to represent the collapsed state
-			$('a.togglecollapse').text('Uncollapse');
+			jQuery('a.togglecollapse').text('Uncollapse');
 		}
 		,
 		function () {
 			// Show all fields
-			$('ol.orderable li').children().show();
+			jQuery('ol.orderable li').children().show();
 			
 			// Hide the label with the title of the field
-			$('ol.orderable li label.fieldtitle').hide();
+			jQuery('ol.orderable li label.fieldtitle').hide();
 			
 			// Change the link text to represent the uncollapsed state
-			$('a.togglecollapse').text('Collapse');
+			jQuery('a.togglecollapse').text('Collapse');
 		}
 	);
 

@@ -10,7 +10,7 @@
 		public function about() {
 			return array(
 				'name'			=> 'Collapse Sectionfields',
-				'version'		=> '1.0.0',
+				'version'		=> '1.0.1',
 				'release-date'	=> '2009-07-11',
 				'author'		=> array(
 					'name'			=> 'Carsten de Vries',
@@ -40,7 +40,6 @@
 			
 			// Include only in section edit pages
 			if ($page instanceof contentBlueprintsSections and $page->_context[0] == 'edit') {
-				$page->addScriptToHead(URL . '/extensions/collapse_sectionfields/assets/jquery.js', 92380001);
 				$page->addScriptToHead(URL . '/extensions/collapse_sectionfields/assets/collapse_sectionfields.js', 92380002);
 			}
 		}
