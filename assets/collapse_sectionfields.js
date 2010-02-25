@@ -1,7 +1,13 @@
 jQuery(document).ready(function() {
+
+	Symphony.Language.add({
+	    'Collapse' : false,
+	    'Uncollapse' : false
+	});
+
 	// Insert anchor that will act as toggle to collapse/uncollapse the sectionfields
 	jQuery('ol.orderable').prev().append('\
-		(<a title="Toggle collapse" class="togglecollapse">Collapse</a>)\
+	(<a title="Toggle collapse" class="togglecollapse">' + Symphony.Language.get('Collapse') + '</a>)\
 	');
 	
 	jQuery("a.togglecollapse").toggle(
@@ -24,7 +30,7 @@ jQuery(document).ready(function() {
 			);
 			
 			// Change the link text to represent the collapsed state
-			jQuery('a.togglecollapse').text('Uncollapse');
+			jQuery('a.togglecollapse').text(Symphony.Language.get('Uncollapse'));
 		}
 		,
 		function () {
@@ -35,7 +41,7 @@ jQuery(document).ready(function() {
 			jQuery('ol.orderable li h4 span.fieldtitle').remove();
 			
 			// Change the link text to represent the uncollapsed state
-			jQuery('a.togglecollapse').text('Collapse');
+			jQuery('a.togglecollapse').text(Symphony.Language.get('Collapse'));
 		}
 	);
 
