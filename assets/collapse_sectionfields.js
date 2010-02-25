@@ -1,6 +1,6 @@
 jQuery(document).ready(function() {
 	// Insert anchor that will act as toggle to collapse/uncollapse the sectionfields
-	jQuery('div.subsection h3').append('\
+	jQuery('ol.orderable').prev().append('\
 		(<a title="Toggle collapse" class="togglecollapse">Collapse</a>)\
 	');
 	
