@@ -1,9 +1,9 @@
 Collapse Sectionfields
 -------------------------------------------------------------------------------
 
-Version: 1.0.1
+Version: 1.1
 Author: Carsten de Vries <carsten@vrieswerk.nl>
-Build Date: 11 July 2009
+Build Date: 25 February 2010
 Github Repository: http://github.com/carsten/globalparamloader/tree/master
 Requirements: Symphony 2
 
@@ -23,6 +23,10 @@ Installation
 
 Change Log
 -------------------------------------------------------------------------------
+
+1.1 Modified by Michael Eichelsdoerfer to work with Symphony 2.0.7. Although 
+the extension ist probably still compatible with older versions of Symphony, 
+it is recommended to use 1.0.1 with these Symphony versions.
 
 1.0.1 Modified by Stephen Bau: Remove jQuery for Symphony 2.0.3+. 
 jQuery.noConflict mode. Fix margins CSS. 
