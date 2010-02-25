@@ -15,11 +15,11 @@ jQuery(document).ready(function() {
 			// Except the header of the field and remove bottom margin
 			jQuery('ol.orderable li h4').show().css('margin-bottom', '0');
 			
-			// Add a label with the title of the field to the header
+			// Add a span with the title of the field to the header
 			jQuery('ol.orderable li h4').each(
 				function (index) {
 					var fieldtitle = jQuery("[name=\"fields["+ index +"][label]\"]").val();
-					jQuery(this).after('<label class="meta fieldtitle">'+ fieldtitle + '</label>');
+					jQuery(this).append('<span class=\"fieldtitle\"> (' + fieldtitle + ')</span>');
 				}
 			);
 			
@@ -31,8 +31,8 @@ jQuery(document).ready(function() {
 			// Show all fields
 			jQuery('ol.orderable li').children().show();
 			
-			// Hide the label with the title of the field
-			jQuery('ol.orderable li label.fieldtitle').hide();
+			// Remove the span with the title of the field
+			jQuery('ol.orderable li h4 span.fieldtitle').remove();
 			
 			// Change the link text to represent the uncollapsed state
 			jQuery('a.togglecollapse').text('Collapse');
